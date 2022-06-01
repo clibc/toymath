@@ -91,7 +91,7 @@ inline v2 operator*(float a, v2 v) { return {v.x * a, v.y * a}; }
 
 void v2::Print() {
 #ifdef DebugLog
-    DebugLog("Vec3(%f, %f)\n", x, y);
+    DebugLog("Vec2(%f, %f)\n", x, y);
 #endif
 }
 
