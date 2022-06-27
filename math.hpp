@@ -667,14 +667,14 @@ SmoothStep(float edge0, float edge1, float x)
    return x * x * (3 - 2 * x);
 }
 
-static inline s32
-TruncateF32ToS32(f32 Value)
+static inline int
+TruncateF32ToS32(float Value)
 {
-    return (s32)Value;
+    return (int)Value;
 }
 
-static inline s32
-RoundF32ToS32(f32 Value)
+static inline int
+RoundF32ToS32(float Value)
 {
-    return (s32)(Value + 0.5f);
+    return (int)(Value + 0.5f);
 }
