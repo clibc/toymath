@@ -29,10 +29,17 @@ union v2
     float Elements[2];
 
     v2() = default;
+    inline
     v2(float ix, float iy)
     {
         x = ix;
         y = iy;
+    }
+    inline
+    v2(float a)
+    {
+        x = a;
+        y = a;
     }
 };
 
@@ -71,11 +78,19 @@ union v3
     float Elements[3];
 
     v3() = default;
+    inline
     v3(float ix, float iy, float iz)
     {
         x = ix;
         y = iy;
         z = iz;
+    }
+    inline
+    v3(float a)
+    {
+        x = a;
+        y = a;
+        z = a;
     }
 };
 
@@ -115,6 +130,7 @@ union v4
     float Elements[4];
 
     v4() = default;
+    inline
     v4(float ix, float iy, float iz, float iw)
     {
         x = ix;
@@ -122,12 +138,21 @@ union v4
         z = iz;
         w = iw;
     }
+    inline
     v4(v3 i, float iw)
     {
         x = i.x;
         y = i.y;
         z = i.z;
         w = iw;
+    }
+    inline
+    v4(float a)
+    {
+        x = a;
+        y = a;
+        z = a;
+        w = a;
     }
 };
 
