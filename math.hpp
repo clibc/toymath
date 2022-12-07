@@ -113,19 +113,19 @@ struct m4
 inline void
 SetColumn(m4& M, int Column, float A1, float A2, float A3, float A4)
 {
-    M.Elements[Column][0] = A1;
-    M.Elements[Column][1] = A2;
-    M.Elements[Column][2] = A3;
-    M.Elements[Column][3] = A4;
+    M.Elements[0][Column] = A1;
+    M.Elements[1][Column] = A2;
+    M.Elements[2][Column] = A3;
+    M.Elements[3][Column] = A4;
 }
 
 inline void
 SetRow(m4& M, int Row, float A1, float A2, float A3, float A4)
 {
-    M.Elements[0][Row] = A1;
-    M.Elements[1][Row] = A2;
-    M.Elements[2][Row] = A3;
-    M.Elements[3][Row] = A4;
+    M.Elements[Row][0] = A1;
+    M.Elements[Row][1] = A2;
+    M.Elements[Row][2] = A3;
+    M.Elements[Row][3] = A4;
 }
 
 inline m4
@@ -427,10 +427,10 @@ Print(const m4& A)
 {
 #ifdef DebugLog
     DebugLog("m4 RowMajor:\n");
-    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[0][0],A.Elements[1][0],A.Elements[2][0],A.Elements[3][0]);
-    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[0][1],A.Elements[1][1],A.Elements[2][1],A.Elements[3][1]);
-    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[0][2],A.Elements[1][2],A.Elements[2][2],A.Elements[3][2]);
-    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[0][3],A.Elements[1][3],A.Elements[2][3],A.Elements[3][3]);
+    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[0][0],A.Elements[0][1],A.Elements[0][2],A.Elements[0][3]);
+    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[1][0],A.Elements[1][1],A.Elements[1][2],A.Elements[1][3]);
+    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[2][0],A.Elements[2][1],A.Elements[2][2],A.Elements[2][3]);
+    DebugLog("[%7.3f, %7.3f, %7.3f, %7.3f]\n", A.Elements[3][0],A.Elements[3][1],A.Elements[3][2],A.Elements[3][3]);
 #endif
 }
 
