@@ -12,6 +12,9 @@
 #define TAU 6.28318530718f
 #define EPSILON 0.00001f
 
+#define DEG2RAD(X) ((X) * PI / 180.0f)
+#define RAD2DEG(X) ((X) * 180.0f / PI)
+
 #define V2Zero v2(0)
 #define V2One  v2(1)
 #define V3Zero v3(0)
@@ -299,6 +302,7 @@ MakeOrthoMatrix(float Left, float Right,
                 float Top, float Bottom,
                 float Near, float Far)
 {
+    // TODO: account for the aspect ratio
     m4 OrthoMatrix;
     OrthoMatrix.Elements[0][0] = 2.0f/(Right - Left);
     OrthoMatrix.Elements[0][1] = 0;
@@ -639,6 +643,12 @@ inline float
 Cos(float a)
 {
     return cosf(a);
+}
+
+inline float
+Acos(float a)
+{
+    return acosf(a);
 }
 
 inline float
